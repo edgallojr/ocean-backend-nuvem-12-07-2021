@@ -6,13 +6,13 @@ const { MongoClient, ObjectId } = require("mongodb");
     const dbName = "ocean_bancodados_09_07_2021";
 
     console.info("Conectando ao banco de dados...");
-
+/*
     const client = await MongoClient.connect(url, { useUnifiedTopology: true });
-
+*/
     console.info("MongoDB conectado com sucesso!");
-
+/*
     const db = client.db(dbName);
-
+*/
     const app = express();
 
     // Informo ao Express que todo corpo
@@ -42,9 +42,10 @@ const { MongoClient, ObjectId } = require("mongodb");
 
     const lista = ["Senhor dos Anéis", "Harry Potter"];
     //              0                   1
-
+/*
     const filmes = db.collection("filmes");
-
+*/
+    const filmes = undefined;
     // [GET] - Read All
     app.get("/filmes", async (req, res) => {
         const listaFilmes = await filmes.find().toArray();
